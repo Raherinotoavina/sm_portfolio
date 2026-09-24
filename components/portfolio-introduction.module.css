@@ -1,0 +1,23 @@
+/* Decorative illustration: no client JavaScript or external image required. */
+.observatory { position: relative; isolation: isolate; overflow: clip; width: 100%; aspect-ratio: 1; background: radial-gradient(ellipse, #73827316, transparent 68%); }
+.globe {
+  position: absolute; inset: 17%; border-radius: 50%; overflow: hidden; transform: rotate(-25deg);
+  background:
+    radial-gradient(circle at 28% 24%, transparent 15%, #11171480 55%, #101313 83%),
+    repeating-linear-gradient(0deg, #d1d4b8aa 0 1px, transparent 1px 7px),
+    radial-gradient(circle at 27% 22%, #c4c6a1, #586b56 38%, #1c2922 75%);
+  box-shadow: inset 8px 5px 30px #ece1a51c, 22px 28px 70px #0008;
+}
+.orbit, .equator { position: absolute; inset: 31% 1%; border: 1px solid #b4bfa75c; border-radius: 50%; transform: rotate(-32deg); }
+.orbit { inset: 5%; border-style: dashed; border-color: #84937f3b; }
+.equator { z-index: 2; border-bottom-color: #e3b68b; border-top-color: transparent; }
+.satellite { position: absolute; top: 65%; left: 11%; width: 11px; height: 11px; border-radius: 50%; background: #f4a16c; box-shadow: 0 0 22px #f4a16c77; }
+.coordinates, .caption { position: absolute; font: 9px monospace; letter-spacing: 0.13em; color: #a9b0ab; }
+.coordinates { top: 2%; left: 7%; }
+.caption { bottom: 0; right: 4%; }
+.crosshair { position: absolute; top: 15%; right: 6%; font: 28px monospace; color: #f4a16c; }
+@media (prefers-reduced-motion: no-preference) {
+  .globe { animation: arrive 1.4s ease-out both; }
+  @keyframes arrive { from { opacity: 0; transform: rotate(-32deg) scale(0.94); } to { opacity: 1; transform: rotate(-25deg) scale(1); } }
+}
+@media (max-width: 1023px) { .observatory { max-width: 480px; margin: 0 auto; } }

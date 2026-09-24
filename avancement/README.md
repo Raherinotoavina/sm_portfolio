@@ -1,6 +1,6 @@
 # Avancement du portfolio
 
-Dernière mise à jour : 24 septembre 2026, 14 h 10.
+Dernière mise à jour : 24 septembre 2026, 14 h 32.
 
 ## Reprise rapide
 
@@ -11,13 +11,17 @@ implémentés et validés par le propriétaire.
 « carnet de terrain numérique » : fond papier froid, bleu électrique, jaune acide,
 typographie massive et schéma technique. L'étude de cas SIRH & Plus, le profil,
 le parcours, la formation, les certifications et le contact sont intégrés.
-Les détails de contribution et de formation non confirmés restent à compléter.
+La migration et les modules SIRH & Plus, le Master II en cours et la période du
+stage MTEFoP sont maintenant confirmés. Les résultats et détails de missions
+encore inconnus restent à compléter.
 
-**Phase active : 03 — Portfolio (contenu confirmé intégré, détails à compléter).**
+**Phase active : 04 — Validation et livraison (à démarrer).**
 
-Prochaine action : enrichir l'étude de cas avec les exemples concrets et la période
-de contribution fournis par le propriétaire ; préciser ensuite le Master II et le
-stage MTEFoP. Aperçu local :
+Prochaine action : vérifier le parcours complet (clavier, réduction des animations,
+accessibilité, mobile, liens et performances), puis préparer la livraison. Les
+problèmes précis, résultats et période SIRH & Plus, ainsi que le projet et la
+stack du stage MTEFoP, pourront enrichir le contenu lorsqu'ils seront fournis.
+Aperçu local :
 http://127.0.0.1:3000 (nécessite le serveur `pnpm start` après build).
 
 ## Phases
@@ -27,8 +31,8 @@ http://127.0.0.1:3000 (nécessite le serveur `pnpm start` après build).
 | [00 — Cadrage](phases/00-cadrage.md) | Socle terminé ; compléments ouverts | Contenu et exigences |
 | [01 — Socle technique](phases/01-socle-technique.md) | Terminée localement | Architecture, tests, CI |
 | [02 — Direction artistique](phases/02-direction-artistique.md) | Validée par le propriétaire | Identité visuelle et première section |
-| [03 — Portfolio](phases/03-portfolio.md) | En cours | Sections, interactions et tests associés |
-| [04 — Validation et livraison](phases/04-validation-livraison.md) | À faire | Vérifications et préparation de la livraison |
+| [03 — Portfolio](phases/03-portfolio.md) | Terminée localement ; compléments éditoriaux ouverts | Sections, interactions et tests associés |
+| [04 — Validation et livraison](phases/04-validation-livraison.md) | À démarrer | Vérifications et préparation de la livraison |
 
 Statuts utilisables : à faire, en cours, bloquée, terminée. Une phase est terminée
 lorsque ses critères de sortie sont vérifiés ; les tests accompagnent chaque

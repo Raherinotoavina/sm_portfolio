@@ -7,16 +7,16 @@ export const experiences = [
     description: "Expérience professionnelle frontend. Les missions et résultats détaillés restent à documenter.",
   },
   {
-    period: "Période à préciser",
+    period: "Février 2023 · 3 mois",
     role: "Stagiaire développeur fullstack",
     organization: "MTEFoP",
-    description: "Stage déclaré auprès du ministère. Projet, technologies et réalisations restent à documenter.",
+    description: "Stage de développement fullstack auprès du ministère. Projet, technologies et réalisations restent à documenter.",
   },
 ] as const;
 
 export const education = [
   { year: "2024", title: "Licence en intelligence artificielle", note: "Diplôme déclaré ; établissement et intitulé exact à confirmer." },
-  { year: "2026", title: "Master II en intelligence artificielle", note: "Parcours déclaré ; statut obtenu ou en cours à confirmer." },
+  { year: "2026", title: "Master II en intelligence artificielle", note: "En cours ; établissement et intitulé officiel à confirmer." },
 ] as const;
 
 export const hackerRankCertifications = [

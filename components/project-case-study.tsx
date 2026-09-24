@@ -8,9 +8,9 @@ export function ProjectCaseStudy() {
         <div className={styles.visualTop}><span>FIG. 01 / STRUCTURE</span><span>FRONTEND · MICRO-FRONTEND</span></div>
         <div className={styles.diagram}>
           <span className={styles.diagramCore}>SIRH<span>&</span>PLUS</span>
-          <span className={styles.nodeOne}>MODULE / 01</span>
-          <span className={styles.nodeTwo}>MODULE / 02</span>
-          <span className={styles.nodeThree}>MODULE / N</span>
+          <span className={styles.nodeOne}>MAINTENANCES</span>
+          <span className={styles.nodeTwo}>FORMATION</span>
+          <span className={styles.nodeThree}>GTA</span>
         </div>
         <div className={styles.visualBottom}>SCHÉMA CONCEPTUEL — PAS UNE CAPTURE DU PRODUIT <span>↗</span></div>
       </div>

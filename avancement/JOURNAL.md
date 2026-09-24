@@ -134,6 +134,25 @@
 - Suite : ajouter les exemples concrets de SIRH & Plus, la période de contribution,
   les informations de formation et de stage lorsque le propriétaire les fournit.
 
+## 2026-09-24 — Précisions SIRH & Plus, Master II et stage
+
+- Informations directement confirmées par le propriétaire : contribution à la
+  migration d'une structure monolithique vers des micro-frontends ; maintenance
+  des modules Gestion des maintenances, Formation et surtout GTA (Gestion des
+  temps d'activité) ; Master II en cours ; stage MTEFoP commencé en février 2023
+  pour trois mois.
+- Mis à jour `PORTFOLIO_CONTENT.md`, `content/projects.ts`, `content/career.ts`,
+  le schéma de l'étude de cas et les tests. La migration est présentée comme une
+  participation, sans attribuer le pilotage ou le résultat global au propriétaire.
+- `pnpm check` réussi : lint, types, 14 tests, couverture JS/TS mesurée à 100 %
+  et build Webpack. Le navigateur local affiche les nouveaux contenus et l'étude
+  de cas dépliée ; aucune erreur ou avertissement console relevé.
+- Phase 03 terminée localement pour le contenu confirmé ; phase 04 devient active.
+  Restent les résultats et la période exacte SIRH & Plus, les réalisations du
+  stage, et les contrôles complets de validation. Aucun push ni fusion effectué.
+- Suite : validation du parcours, de l'accessibilité, des performances et des
+  liens, puis préparation de la livraison selon les choix du propriétaire.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

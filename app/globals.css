@@ -1,39 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: dark;
-  --background: #101313;
-  --foreground: #f2efe6;
-  --primary: #f4a16c;
-  --primary-foreground: #171310;
-  --muted-foreground: #a9b0ab;
-  --accent: #252d29;
-  --accent-foreground: #f2efe6;
-  --input: #48514b;
-  --ring: #f4a16c;
-  --radius: 0.25rem;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-md: var(--radius);
-  --font-sans: Arial, Helvetica, sans-serif;
-}
-
-@layer base {
-  body { @apply bg-background text-foreground font-sans; }
-  ::selection { background: #f4a16c; color: #101313; }
-  a:focus-visible { outline: 2px solid var(--ring); outline-offset: 6px; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-}
+:root { color-scheme: light; --background: #eeeee8; --foreground: #161b1d; --primary: #2147e6; --primary-foreground: #fff; --muted-foreground: #555f65; --accent: #e2ed76; --accent-foreground: #161b1d; --input: #a3aba9; --ring: #2147e6; --radius: 0; }
+@theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-input: var(--input); --color-ring: var(--ring); --radius-md: var(--radius); --font-sans: Arial, Helvetica, sans-serif; }
+@layer base { html { scroll-behavior: smooth; } body { @apply bg-background text-foreground font-sans; } ::selection { background: var(--accent); color: var(--foreground); } a:focus-visible, summary:focus-visible { outline: 3px solid var(--ring); outline-offset: 5px; } @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } } }

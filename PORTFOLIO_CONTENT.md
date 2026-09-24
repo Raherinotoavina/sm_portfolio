@@ -152,4 +152,7 @@ certifications → Contact.
 
 Les règles d'application sont consignées dans `AGENTS.md`. Ces exigences sont
 documentées ; cela ne signifie pas que la CI et les tests sont déjà implémentés.
-Le thème artistique précis reste à définir.
+La direction « carnet de terrain numérique » (papier froid, bleu électrique,
+jaune acide, typographie massive et diagrammes techniques) a été validée par le
+propriétaire le 24 septembre 2026. Les détails de contenu listés ci-dessus
+restent à confirmer indépendamment de ce choix visuel.

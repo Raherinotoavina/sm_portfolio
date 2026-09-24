@@ -85,6 +85,53 @@
 - Serveur d'aperçu local démarré sur http://127.0.0.1:3000 ; modifications de
   phase 02 non committées. Suite : retour visuel avant généralisation en phase 03.
 
+## 2026-09-24 — Refonte « carnet de terrain numérique »
+
+- Retour du propriétaire : la première proposition rappelle trop Claude par son
+  symbole, sa couleur et le prénom en italique. Demande d'une identité unique,
+  d'études de cas et d'interactions inspirées des portfolios Awwwards.
+- Vérifié l'état Git propre, puis créé `codex/feat-field-atlas-redesign` avant
+  modification. La proposition précédente est au commit `77dff5a`, poussé sur sa
+  branche distante, non fusionné dans `main`.
+- Remplacé l'accueil par une composition de carnet de terrain numérique : papier
+  froid, bleu électrique, jaune acide, caractères condensés, grilles et repères.
+  Aucun astérisque, globe ou serif italique repris de la première proposition.
+- Ajouté une étude de cas SIRH & Plus dépliable, avec rôle, contribution et stack
+  confirmés ; contexte du produit distingué du travail personnel. Le schéma est
+  explicitement conceptuel. Profil, compétences et contact intégrés.
+- Interactions : disclosure clavier natif, survols, ancres ; transitions supprimées
+  en préférence de mouvement réduit. Aucun projet ni résultat inventé.
+- `pnpm check` réussi : lint, types, 12 tests, couverture 100 % du code JS/TS
+  mesuré et build Webpack. La couverture ne mesure ni le CSS ni la qualité visuelle.
+- Navigateur local contrôlé à 1280 × 800 et 390 × 844 : largeur du document égale
+  au viewport ; ouverture de l'étude de cas vérifiée ; aucune erreur console relevée.
+  Audit d'accessibilité complet et
+  contrôle multi-navigateurs non réalisés.
+- Fichiers : `components/portfolio-introduction.tsx`, son CSS Module,
+  `app/globals.css`, `app/page.test.tsx`, suivi. Aucun commit ni push de la refonte.
+- Suite : recueillir le retour du propriétaire sur la nouvelle piste ; obtenir les
+  exemples concrets de SIRH & Plus et compléter expériences, formation et certificats.
+
+## 2026-09-24 — Validation de la direction et intégration du parcours
+
+- Le propriétaire a validé la direction « carnet de terrain numérique » et demandé
+  de continuer l'intégration. Phase 02 marquée terminée ; phase 03 poursuivie sur
+  la même branche dédiée `codex/feat-field-atlas-redesign`, sans mélanger de tâche.
+- Ajouté des données éditoriales séparées dans `content/career.ts` et
+  `content/projects.ts` ; extrait la présentation du projet vers
+  `components/project-case-study.tsx`.
+- Intégré les expériences VA-Mada et MTEFoP, la licence et le Master II sans
+  inventer les dates ou statuts manquants. Sept certificats HackerRank reliés à
+  leurs justificatifs et distinctions CodinGame reliées au profil public.
+- Navigation mise à jour pour les sections numérotées 01 à 05.
+- `pnpm check` réussi : lint, types, 14 tests, couverture 100 % du code JS/TS
+  mesuré et build Webpack.
+- Aperçu local : sections et liens visibles ; contrôles de largeur à 390 × 844 et
+  1280 × 800, sans débordement ni erreur console. Audit d'accessibilité complet
+  et multi-navigateurs restent à faire.
+- Suite : ajouter les exemples concrets de SIRH & Plus, la période de contribution,
+  les informations de formation et de stage lorsque le propriétaire les fournit.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

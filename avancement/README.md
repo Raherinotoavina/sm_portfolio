@@ -1,6 +1,6 @@
 # Avancement du portfolio
 
-Dernière mise à jour : 24 septembre 2026, 14 h 32.
+Dernière mise à jour : 24 septembre 2026, 19 h 26.
 
 ## Reprise rapide
 
@@ -15,10 +15,11 @@ La migration et les modules SIRH & Plus, le Master II en cours et la période du
 stage MTEFoP sont maintenant confirmés. Les résultats et détails de missions
 encore inconnus restent à compléter.
 
-**Phase active : 04 — Validation et livraison (à démarrer).**
+**Phase active : refonte « intelligence sereine » à valider, puis phase 04.**
 
-Prochaine action : vérifier le parcours complet (clavier, réduction des animations,
-accessibilité, mobile, liens et performances), puis préparer la livraison. Les
+Prochaine action : recueillir le retour du propriétaire sur la refonte « intelligence
+sereine », puis vérifier le parcours complet (clavier, réduction des animations,
+accessibilité, mobile, liens et performances) et préparer la livraison. Les
 problèmes précis, résultats et période SIRH & Plus, ainsi que le projet et la
 stack du stage MTEFoP, pourront enrichir le contenu lorsqu'ils seront fournis.
 Aperçu local :
@@ -61,6 +62,11 @@ fonctionnalité, pas seulement la phase finale.
 - Lien d'évitement clavier et ancre d'exploration vérifiés ; aucun avertissement
   ou erreur console relevé. Réduction des animations prévue en CSS, sans émulation
   de la préférence système dans le navigateur ; pas d'audit d'accessibilité complet.
+- Refonte « intelligence sereine » développée sur
+  `codex/feat-ai-serenity-redesign` : composition éditoriale, organisme cognitif
+  CSS, palette ivoire/indigo/sauge et animations lentes avec repli reduced-motion.
+  `pnpm check` réussi (14 tests, couverture 100 %, lint, types et build). Aperçu
+  contrôlé sur ordinateur et à 390 × 844, sans débordement ni erreur console.
 
 ## Décisions et contexte à préserver
 

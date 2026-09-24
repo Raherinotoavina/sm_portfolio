@@ -9,7 +9,7 @@ describe("Home", () => {
     render(<Home />);
     expect(screen.getByRole("heading", { level: 1, name: "RAHERINOTOAVINA Safidy Mariël" })).toBeVisible();
     expect(screen.getByRole("main")).toHaveAttribute("id", "contenu");
-    expect(screen.getByText("Développeur fullstack")).toBeVisible();
+    expect(screen.getByText(/Développeur fullstack à la croisée/)).toBeVisible();
   });
 
   it("connects every in-page link to an existing section", () => {
@@ -18,7 +18,7 @@ describe("Home", () => {
       const href = link.getAttribute("href")!;
       if (href.startsWith("#")) expect(document.getElementById(href.slice(1))).toBeInTheDocument();
     }
-    expect(screen.getByRole("link", { name: "Découvrir les projets" })).toHaveAttribute("href", "#projets");
+    expect(screen.getByRole("link", { name: "Explorer" })).toHaveAttribute("href", "#projets");
   });
 
   it("presents a case study with the confirmed contribution and source context", async () => {
@@ -63,7 +63,7 @@ describe("Home", () => {
   it("keeps primary navigation keyboard accessible", async () => {
     const user = userEvent.setup();
     render(<Home />);
-    for (const name of ["Ramasama — accueil", "Projets 01", "Parcours 03", "Contact 05", "Découvrir les projets"]) {
+    for (const name of ["Ramasama — accueil", "Travaux 01", "Profil 02", "Parcours 03", "Disponible pour échanger"]) {
       await user.tab();
       expect(screen.getByRole("link", { name })).toHaveFocus();
     }

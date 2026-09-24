@@ -52,6 +52,18 @@
   Aucun résultat distant de CI annoncé. Protection de branche non configurée.
 - Suite : phase 02 ; consulter les résultats du workflow dans GitHub Actions.
 
+## 2026-09-24 — Branches dédiées
+
+- Demande du propriétaire : créer une nouvelle branche pour chaque fonctionnalité
+  ou correction et conserver cette consigne dans `AGENTS.md`.
+- Créé `codex/docs-branch-workflow` depuis `main` propre avant les modifications.
+- Ajouté le workflow Git dans `AGENTS.md` et rappelé la règle dans le tableau de bord.
+- Vérifications : état Git et `git diff --check` ; tests applicatifs non exécutés,
+  modifications documentaires uniquement. Aucun commit, push ni fusion effectué.
+- Phase 02 inchangée, à démarrer : aucune case fonctionnelle supplémentaire validée.
+- Suite : enregistrer ces changements lorsque demandé, puis démarrer la direction
+  artistique sur sa propre branche.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

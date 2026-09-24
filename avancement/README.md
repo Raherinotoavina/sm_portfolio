@@ -53,6 +53,9 @@ fonctionnalité, pas seulement la phase finale.
 
 - Source du contenu : [PORTFOLIO_CONTENT.md](../PORTFOLIO_CONTENT.md).
 - Règles de développement : [AGENTS.md](../AGENTS.md).
+- Chaque fonctionnalité, correction ou tâche documentaire se fait sur une branche
+  dédiée `codex/`, jamais directement sur `main`. Règle ajoutée sur
+  `codex/docs-branch-workflow` ; modifications documentaires non committées ni poussées.
 - Clean code, architecture claire, Tailwind CSS, shadcn/ui, tests de toutes les
   fonctionnalités et couverture minimale de 80 % sont demandés par le propriétaire.
 - Le design doit surprendre et donner la sensation d'entrer dans un autre univers.

@@ -22,6 +22,20 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Garder une prochaine action concrète pour permettre la reprise sans l'historique
   du chat. Distinguer les demandes confirmées des propositions à définir.
 
+# Workflow Git
+
+- Pour chaque nouvelle fonctionnalité ou correction, créer une branche dédiée
+  avant toute modification. Appliquer aussi cette règle aux tâches documentaires.
+- Ne pas développer ni committer directement sur `main`.
+- Utiliser le préfixe `codex/` avec un nom descriptif, par exemple
+  `codex/feat-contact`, `codex/fix-navigation` ou `codex/docs-branch-workflow`,
+  sauf si le propriétaire demande un autre nom.
+- Avant de créer une branche, vérifier l'état Git et la branche de départ.
+  Préserver les changements existants ; ne pas mélanger des tâches indépendantes.
+- Pour reprendre une tâche en cours, réutiliser sa branche dédiée ; pour une
+  nouvelle tâche indépendante, créer une nouvelle branche depuis la base appropriée.
+- Ne pas fusionner dans `main` ni pousser sans demande du propriétaire.
+
 # Contenu du portfolio
 
 Le recensement du contenu et de ses sources se trouve dans `PORTFOLIO_CONTENT.md`.

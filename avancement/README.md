@@ -32,7 +32,8 @@ fonctionnalité, pas seulement la phase finale.
 ## État technique observé
 
 - Dépôt distant `origin` : https://github.com/Raherinotoavina/sm_portfolio.git ;
-  branche locale `main`. Publication initiale en cours ; résultat consigné au journal.
+  branche `main` publiée et suivie via `origin/main`. Premier push réussi le
+  24 septembre 2026 ; résultats de GitHub Actions non vérifiés.
 
 - Next.js 16.3.6, React 19.2.8, TypeScript et Tailwind CSS 4 dans `package.json`.
 - Gestionnaire déclaré : pnpm 10.30.1.

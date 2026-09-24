@@ -41,17 +41,18 @@
   déploiement, aucun contrôle visuel navigateur. Le lockfile est actualisé.
 - Suite : phase 02, proposition concrète de direction artistique et vérification visuelle.
 
-## Format pour les prochaines entrées
-
 ## 2026-09-24 — Liaison GitHub
 
 - Demande du propriétaire : relier et pousser le projet vers
   https://github.com/Raherinotoavina/sm_portfolio.git sur `main`.
 - Dépôt Git local et commit initial déjà présents ; historique et README conservés.
 - Dépôt distant vérifié sans référence existante ; remote `origin` ajouté.
-- Préparation du commit du socle et du suivi ; résultat du push à vérifier.
+- Commit du socle `7b33040` poussé avec succès ; `main` suit `origin/main`.
+- Vérification GitHub Actions via `gh` indisponible : CLI non authentifiée.
+  Aucun résultat distant de CI annoncé. Protection de branche non configurée.
+- Suite : phase 02 ; consulter les résultats du workflow dans GitHub Actions.
 
-## Format pour les prochaines entrées (rappel)
+## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications
 et résultats ; blocages ou limites ; prochaine action.

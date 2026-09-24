@@ -126,6 +126,8 @@
 - Navigation mise à jour pour les sections numérotées 01 à 05.
 - `pnpm check` réussi : lint, types, 14 tests, couverture 100 % du code JS/TS
   mesuré et build Webpack.
+- Étape enregistrée dans le commit `907ac0f` sur la branche dédiée ; aucun push
+  ni fusion. `git diff --check` réussi avant commit.
 - Aperçu local : sections et liens visibles ; contrôles de largeur à 390 × 844 et
   1280 × 800, sans débordement ni erreur console. Audit d'accessibilité complet
   et multi-navigateurs restent à faire.

@@ -67,7 +67,8 @@ fonctionnalité, pas seulement la phase finale.
   `codex/docs-branch-workflow` (commit local `259e31f`). Phase 02 sur
   `codex/feat-artistic-direction`, créée depuis ce commit pour conserver la règle.
   La phase 02 initiale a depuis été committée et poussée (`77dff5a`), sans fusion.
-  La refonte actuelle est sur `codex/feat-field-atlas-redesign`, non committée.
+  La refonte validée et l'intégration sont enregistrées dans `907ac0f` sur
+  `codex/feat-field-atlas-redesign`, sans push ni fusion.
 - Clean code, architecture claire, Tailwind CSS, shadcn/ui, tests de toutes les
   fonctionnalités et couverture minimale de 80 % sont demandés par le propriétaire.
 - Le design doit surprendre et donner la sensation d'entrer dans un autre univers.

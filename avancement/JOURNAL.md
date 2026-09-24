@@ -153,6 +153,26 @@
 - Suite : validation du parcours, de l'accessibilité, des performances et des
   liens, puis préparation de la livraison selon les choix du propriétaire.
 
+## 2026-09-24 — Refonte « intelligence sereine »
+
+- Demande du propriétaire : viser une qualité de portfolio publiable sur Awwwards,
+  avec une présence de l'ère IA à la fois calme, apaisante, originale et élégante.
+- Créé la branche dédiée `codex/feat-ai-serenity-redesign` depuis `main` propre.
+- Refondu l'accueil autour d'une direction « intelligence organique » : palette
+  ivoire, indigo et sauge, typographie éditoriale, halos diffus, navigation vitrée
+  et organisme cognitif abstrait entièrement réalisé en CSS.
+- Harmonisé l'étude de cas, le profil, le parcours, les certifications et le
+  contact. Les contenus factuels confirmés ont été conservés.
+- Les mouvements sont lents et décoratifs ; toutes les animations principales
+  sont désactivées via `prefers-reduced-motion`.
+- `pnpm check` réussi : lint, types, 14 tests, couverture JS/TS à 100 % et build
+  Webpack. Rendu contrôlé sur ordinateur et à 390 × 844 ; largeur mobile sans
+  débordement et aucune erreur ou alerte console.
+- Limites : validation artistique du propriétaire à obtenir ; audit complet
+  accessibilité, performances et multi-navigateurs toujours à réaliser.
+- Suite : recueillir le retour visuel, itérer si nécessaire, puis reprendre la
+  validation de livraison.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

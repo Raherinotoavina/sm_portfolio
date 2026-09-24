@@ -1,6 +1,7 @@
 # Phase 04 — Validation et livraison
 
-Statut : à démarrer ; phase active après l'intégration locale du contenu confirmé.
+Statut : en attente de validation graphique de la refonte « intelligence sereine » ;
+les contrôles complets de livraison restent à réaliser.
 
 Objectif : vérifier l'ensemble et préparer une livraison reproductible.
 

@@ -52,6 +52,39 @@
   Aucun résultat distant de CI annoncé. Protection de branche non configurée.
 - Suite : phase 02 ; consulter les résultats du workflow dans GitHub Actions.
 
+## 2026-09-24 — Branches dédiées
+
+- Demande du propriétaire : créer une nouvelle branche pour chaque fonctionnalité
+  ou correction et conserver cette consigne dans `AGENTS.md`.
+- Créé `codex/docs-branch-workflow` depuis `main` propre avant les modifications.
+- Ajouté le workflow Git dans `AGENTS.md` et rappelé la règle dans le tableau de bord.
+- Vérifications : état Git et `git diff --check` ; tests applicatifs non exécutés,
+  modifications documentaires uniquement. Aucun commit, push ni fusion effectué.
+- Phase 02 inchangée, à démarrer : aucune case fonctionnelle supplémentaire validée.
+- Suite : enregistrer ces changements lorsque demandé, puis démarrer la direction
+  artistique sur sa propre branche.
+
+## 2026-09-24 — Première proposition artistique
+
+- Consignes Git enregistrées séparément dans `259e31f` sur la branche documentaire,
+  puis création de `codex/feat-artistic-direction` depuis ce commit. Aucun push/fusion.
+- Accueil « observatoire numérique » : typographie éditoriale, palette encre/abricot,
+  sphère orbitale CSS, navigation, contact et repères issus du contenu confirmé.
+- Fichiers : `components/portfolio-introduction.tsx`, son CSS Module,
+  `app/globals.css`, `content/profile.ts`, `app/page.test.tsx` et suivi.
+- Illustration sans JS client supplémentaire ni image distante ; animation courte
+  désactivée par défaut lorsque la préférence de réduction du mouvement est active.
+- `pnpm check` réussi : 12 tests, couverture 100 % des quatre métriques JS/TS,
+  lint/types/build. `git diff --check` réussi.
+- Contrôles sur build de production : ordinateur 1280 × 720, mobiles 390 × 844
+  et 320 × 740, ancre d'exploration, focus du lien d'évitement et destination.
+  Débordement décoratif identifié puis corrigé ; aucune erreur console relevée.
+- Limites : pas d'audit complet d'accessibilité ni de test multi-navigateurs ;
+  préférence de réduction du mouvement contrôlée dans le CSS, sans émulation.
+  Pas de validation graphique du propriétaire ni de CI distante exécutée ici.
+- Serveur d'aperçu local démarré sur http://127.0.0.1:3000 ; modifications de
+  phase 02 non committées. Suite : retour visuel avant généralisation en phase 03.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
-/* Neutral foundation; artistic direction is developed in phase 02. */
 :root {
-  --background: oklch(0.985 0 0);
-  --foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --muted-foreground: oklch(0.44 0 0);
-  --accent: oklch(0.93 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --input: oklch(0.8 0 0);
-  --ring: oklch(0.44 0 0);
-  --radius: 0.625rem;
+  color-scheme: dark;
+  --background: #101313;
+  --foreground: #f2efe6;
+  --primary: #f4a16c;
+  --primary-foreground: #171310;
+  --muted-foreground: #a9b0ab;
+  --accent: #252d29;
+  --accent-foreground: #f2efe6;
+  --input: #48514b;
+  --ring: #f4a16c;
+  --radius: 0.25rem;
 }
 
 @theme inline {
@@ -30,4 +30,10 @@
 
 @layer base {
   body { @apply bg-background text-foreground font-sans; }
+  ::selection { background: #f4a16c; color: #101313; }
+  a:focus-visible { outline: 2px solid var(--ring); outline-offset: 6px; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 }

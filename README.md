@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — RAHERINOTOAVINA Safidy Mariël
 
-## Getting Started
+Socle Next.js App Router, React, TypeScript, Tailwind CSS 4 et shadcn/ui (Radix).
+La page actuelle est une introduction minimale ; la direction immersive vient
+en phase 02. Suivi : [avancement/README.md](avancement/README.md).
 
-First, run the development server:
+## Installation et commandes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+Node 24 (`.node-version`) et pnpm 10.30.1 (`packageManager`) sont les versions
+prévues pour la CI. Les premiers contrôles locaux ont été exécutés sous Node 26.9.0.
+
+```sh
+pnpm install --frozen-lockfile
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Commande | Usage |
+| --- | --- |
+| `pnpm lint` | ESLint sans avertissement autorisé |
+| `pnpm typecheck` | Génération des types de routes puis TypeScript |
+| `pnpm test` | Tests unitaires, une exécution |
+| `pnpm test:watch` | Tests pendant le développement |
+| `pnpm test:coverage` | Tests et seuils de couverture |
+| `pnpm build` | Build de production avec Webpack |
+| `pnpm build:turbo` | Build alternatif avec Turbopack |
+| `pnpm start` | Serveur de production après build |
+| `pnpm check` | Lint, types, couverture et build |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Webpack est le moteur de build par défaut ici : Turbopack a rencontré une
+restriction d'ouverture de port lors de la transformation PostCSS dans
+l'environnement local, y compris après relance autorisée. Le build Webpack
+fonctionne ; le script alternatif permet de réévaluer Turbopack ultérieurement.
+Les polices système évitent tout téléchargement de police pendant le build ;
+le choix typographique définitif appartient à la phase artistique.
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` : routes, document racine, métadonnées et styles globaux.
+- `content/` : données éditoriales confirmées, indépendantes de React.
+- `components/` : présentation du portfolio.
+- `components/ui/` : primitives shadcn/ui adaptées et possédées par le projet.
+- `lib/` : utilitaires indépendants des sections et testables.
+- `tests/` : initialisation des tests ; tests comportementaux colocaux en `*.test.ts(x)`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Les routes composent les composants ; les composants lisent le contenu et
+utilisent les primitives. Ne pas ajouter de couche d'accès aux données tant
+qu'aucun service externe n'est nécessaire. La configuration `components.json`
+permet de poursuivre l'intégration shadcn/ui ; les tokens CSS actuels couvrent
+le bouton installé et seront étendus avec les prochains composants.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tests et couverture
 
-## Deploy on Vercel
+Vitest 5, React Testing Library, user-event et jsdom vérifient les comportements
+visibles : liens, contenu, clavier, état désactivé, composition et document HTML.
+Le layout est rendu en HTML statique pour éviter d'imbriquer un document HTML
+complet dans celui de jsdom. Les composants synchrones actuels sont testables
+directement ; tout futur Server Component asynchrone nécessitera aussi une
+vérification d'intégration adaptée.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le seuil de 80 % s'applique aux lignes, instructions, branches et fonctions,
+globalement **et par fichier**. Tous les fichiers JS/TS sont inclus, même s'ils
+ne sont jamais importés par les tests. Ni les routes, ni le contenu, ni les
+primitives UI ne sont exclus.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Exclusions dans `vitest.config.mts` : dépendances, sorties générées (`.next`,
+`out`, `build`, `coverage`), déclarations de types, tests et infrastructure
+`tests/`, fichiers `*.config.*`. Ces fichiers ne sont pas du code applicatif à
+mesurer ; ne pas placer de fonctionnalité métier dans ces emplacements.
+CSS, JSON et Markdown ne contiennent pas de code JS instrumentable et requièrent
+leurs propres vérifications visuelles, de configuration ou de contenu.
+
+Rapports : `coverage/index.html`, `coverage/lcov.info` et
+`coverage/coverage-summary.json` (non versionnés).
+
+## Intégration continue
+
+`.github/workflows/ci.yml` exécute installation verrouillée, lint, types,
+tests/couverture et build à chaque push et pull request. Les rapports sont
+conservés 14 jours. Le workflow est créé mais n'a pas encore été exécuté sur GitHub.
+
+Le job `Lint, types, coverage and build` doit devenir un contrôle requis dans
+la protection de la branche principale pour bloquer les fusions en échec.
+Ce réglage distant n'est pas effectué. GitHub Actions intervient après le push,
+il ne peut pas empêcher celui-ci d'arriver sur le serveur.
+
+## Références
+
+- Consignes Next.js spécifiques à la version : `node_modules/next/dist/docs/`.
+- [Installation manuelle shadcn/ui](https://ui.shadcn.com/docs/installation/manual).
+- [Bouton Radix shadcn/ui](https://ui.shadcn.com/docs/components/radix/button).
+- [Configuration de couverture Vitest](https://vitest.dev/config/coverage).
+- Contenu et sources personnelles : [PORTFOLIO_CONTENT.md](PORTFOLIO_CONTENT.md).

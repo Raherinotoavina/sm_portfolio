@@ -11,7 +11,7 @@ Les éléments signalés « à préciser » ne doivent pas être présentés com
 - Nom complet confirmé et à afficher : RAHERINOTOAVINA Safidy Mariël.
 - Positionnement déclaré : développeur fullstack, avec une expérience professionnelle frontend et une formation en intelligence artificielle.
 - Localisation du profil CodinGame : Antananarivo, Madagascar ; à confirmer pour le portfolio.
-- Formation déclarée : Master II en informatique, spécialité intelligence artificielle, 2026 ; statut obtenu/en cours à préciser.
+- Formation déclarée : Master II en informatique, spécialité intelligence artificielle, en cours en 2026.
 
 ### Proposition de présentation
 
@@ -42,9 +42,17 @@ Compétences déclarées par le propriétaire :
 - Rôle déclaré : développeur frontend.
 - Stack déclarée : React, Nx, micro-frontend, Tailwind CSS, shadcn.
 - Contexte observé sur le site : solution de gestion des ressources humaines pour entreprises, associations et collectivités employeuses ; elle présente notamment la gestion du personnel, des entretiens, de la santé et de la sécurité, ainsi que des outils de pilotage RH.
-- Contribution confirmée : maintenance de tous les modules existants côté frontend de la plateforme.
-- Proposition de description : « Maintenance de l'ensemble des modules frontend existants de la plateforme SIRH & Plus, avec React et Nx dans une architecture micro-frontend. »
-- À préciser : période de contribution, exemples de maintenance, difficultés résolues, résultats, captures utilisables et lien éventuel avec VA-Mada.
+- Contributions confirmées par le propriétaire : participation à la migration
+  d'une structure monolithique vers une structure micro-frontend ; maintenance
+  des modules Gestion des maintenances, Formation et surtout GTA (Gestion des
+  temps d'activité). La déclaration précédente mentionnait aussi la maintenance
+  de tous les modules frontend existants ; présenter les modules nommés comme
+  exemples concrets, sans attribuer la migration entière au propriétaire.
+- Proposition de description : « Contribution à la migration du frontend d'une
+  structure monolithique vers une architecture micro-frontend, puis maintenance
+  des modules Gestion des maintenances, Formation et GTA. »
+- À préciser : période de contribution, problèmes précis résolus, résultats,
+  captures utilisables et lien éventuel avec VA-Mada.
 - Le site décrit le produit ; il ne prouve ni la stack ni les contributions personnelles, qui proviennent du propriétaire.
 - Ne pas attribuer toutes les fonctionnalités du produit au propriétaire ni assimiler le site vitrine à l'application réalisée.
 
@@ -59,12 +67,13 @@ Compétences déclarées par le propriétaire :
 
 - Organisme déclaré : ministère du Travail, de l'Emploi et de la Fonction publique (MTEFoP).
 - Le message initial comporte une répétition dans le nom du ministère ; intitulé officiel à confirmer.
-- Dates, durée, projet, stack et réalisations : à préciser.
+- Début : février 2023 ; durée : trois mois, confirmés par le propriétaire.
+- Projet, stack et réalisations : à préciser.
 
 ## Formation
 
 - 2024 : licence en intelligence artificielle, selon le propriétaire.
-- 2026 : Master II en intelligence artificielle, selon le propriétaire ; obtenu ou en cours à préciser.
+- 2026 : Master II en intelligence artificielle, en cours selon le propriétaire.
 - EMIT apparaît sur HackerRank et « EMIT - Fianarantsoa » sur CodinGame ; établissement de chaque diplôme et intitulés officiels à confirmer.
 
 ## Certifications HackerRank
@@ -136,9 +145,9 @@ certifications → Contact.
 ## Points à compléter
 
 1. Objectif principal du portfolio (recrutement, freelance, ou les deux).
-2. Statut du Master II et établissements/intitulés exacts des diplômes.
-3. Dates et réalisations du stage au MTEFoP.
-4. Exemples concrets de maintenance frontend sur SIRH & Plus, si disponibles.
+2. Établissements et intitulés exacts des diplômes.
+3. Projet, stack et réalisations du stage au MTEFoP.
+4. Problèmes précis résolus et résultats du travail sur SIRH & Plus, si disponibles.
 5. Autres projets, notamment fullstack ou IA, si disponibles.
 6. Langues du portfolio, CV, photo et disponibilité, selon le contenu souhaité.
 
@@ -152,4 +161,7 @@ certifications → Contact.
 
 Les règles d'application sont consignées dans `AGENTS.md`. Ces exigences sont
 documentées ; cela ne signifie pas que la CI et les tests sont déjà implémentés.
-Le thème artistique précis reste à définir.
+La direction « carnet de terrain numérique » (papier froid, bleu électrique,
+jaune acide, typographie massive et diagrammes techniques) a été validée par le
+propriétaire le 24 septembre 2026. Les détails de contenu listés ci-dessus
+restent à confirmer indépendamment de ce choix visuel.

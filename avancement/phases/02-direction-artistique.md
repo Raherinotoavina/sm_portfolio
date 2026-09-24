@@ -1,9 +1,15 @@
 # Phase 02 — Direction artistique
 
-Statut : proposition réalisée et vérifiée localement — retour du propriétaire attendu.
+Statut : terminée — nouvelle direction validée par le propriétaire le 24 septembre 2026.
 
 L'introduction neutre a été remplacée par une proposition d'observatoire numérique.
 Branche : `codex/feat-artistic-direction`.
+
+Retour du propriétaire le 24 septembre : accueil jugé beau, mais trop proche de
+Claude (marque, couleur et typographie). Nouvelle branche
+`codex/feat-field-atlas-redesign` : « carnet de terrain numérique », papier froid,
+bleu électrique, jaune acide, caractères condensés massifs et diagrammes de système.
+Cette nouvelle piste a été validée par le propriétaire lors de la reprise de la phase 03.
 
 Objectif : traduire l'ambition immersive en une identité visuelle concrète.
 
@@ -16,7 +22,8 @@ une décision déjà prise par le propriétaire.
 - [x] Réaliser une première section d'accueil représentative avec ses tests.
 - [x] Vérifier le rendu sur mobile et ordinateur, la lisibilité et le clavier.
 - [x] Prévoir une expérience cohérente avec réduction des animations.
-- [ ] Recueillir le retour du propriétaire avant généralisation en phase 03.
+- [x] Recueillir le retour du propriétaire sur la première proposition.
+- [x] Recueillir le retour sur la nouvelle proposition : validée le 24 septembre 2026.
 
 ## Choix de la proposition
 

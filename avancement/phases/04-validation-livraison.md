@@ -1,6 +1,6 @@
 # Phase 04 — Validation et livraison
 
-Statut : à faire.
+Statut : à démarrer ; phase active après l'intégration locale du contenu confirmé.
 
 Objectif : vérifier l'ensemble et préparer une livraison reproductible.
 

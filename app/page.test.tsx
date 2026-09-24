@@ -1,43 +1,71 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it } from "vitest";
 import Home from "./page";
+import { codingame, hackerRankCertifications } from "@/content/career";
 
 describe("Home", () => {
-  it("introduces the owner with one main heading and a skip-link target", () => {
+  it("identifies the owner and provides the skip-link target", () => {
     render(<Home />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("RAHERINOTOAVINA Safidy Mariël");
+    expect(screen.getByRole("heading", { level: 1, name: "RAHERINOTOAVINA Safidy Mariël" })).toBeVisible();
     expect(screen.getByRole("main")).toHaveAttribute("id", "contenu");
     expect(screen.getByText("Développeur fullstack")).toBeVisible();
   });
-  it("provides working contact and professional profile destinations", () => {
+
+  it("connects every in-page link to an existing section", () => {
     render(<Home />);
-    expect(screen.getByRole("link", { name: "Me contacter" })).toHaveAttribute("href", "mailto:raherinotoavinasa@gmail.com");
-    expect(screen.getByRole("link", { name: "Voir mon GitHub" })).toHaveAttribute("href", "https://github.com/raherinotoavina");
-  });
-  it("connects every internal navigation link to an existing section", () => {
-    render(<Home />);
-    expect(screen.getByRole("navigation", { name: "Navigation principale" })).toBeVisible();
     for (const link of screen.getAllByRole("link")) {
       const href = link.getAttribute("href")!;
-      if (href.startsWith("#")) {
-        expect(document.getElementById(href.slice(1))).toBeInTheDocument();
-      }
+      if (href.startsWith("#")) expect(document.getElementById(href.slice(1))).toBeInTheDocument();
     }
-    expect(screen.getByRole("link", { name: "Explorer mon univers" })).toHaveAttribute("href", "#exploration");
+    expect(screen.getByRole("link", { name: "Découvrir les projets" })).toHaveAttribute("href", "#projets");
   });
-  it("keeps navigation and primary actions accessible in keyboard order", async () => {
+
+  it("presents a case study with the confirmed contribution and source context", async () => {
     const user = userEvent.setup();
     render(<Home />);
-    for (const name of ["Ramasama — accueil", "Exploration", "Parlons ensemble", "Explorer mon univers", "Me contacter", "Voir mon GitHub"]) {
+    expect(screen.getByRole("heading", { name: "SIRH & Plus" })).toBeVisible();
+    expect(screen.getByText("Migration d’une structure monolithique vers des micro-frontends")).toBeVisible();
+    expect(screen.getByText("Gestion des maintenances · Formation · GTA")).toBeVisible();
+    await user.click(screen.getByText("Lire l’étude de cas"));
+    expect(screen.getByText(/GTA \(Gestion des temps d’activité\)/)).toBeVisible();
+    expect(screen.getByText(/Période exacte de contribution/)).toBeVisible();
+    expect(screen.getByRole("link", { name: /Découvrir le site du produit/ })).toHaveAttribute("href", "https://www.sirhplus.fr/");
+  });
+
+  it("links to contact and professional profiles", () => {
+    render(<Home />);
+    expect(screen.getByRole("link", { name: "Écrivez-moi" })).toHaveAttribute("href", "mailto:raherinotoavinasa@gmail.com");
+    expect(screen.getByRole("link", { name: /Explorer mes dépôts GitHub/ })).toHaveAttribute("href", "https://github.com/raherinotoavina");
+    expect(screen.getByRole("link", { name: /LinkedIn/ })).toHaveAttribute("href", "https://www.linkedin.com/in/safidy-mariel-raherinotoavina-659612262");
+  });
+
+  it("presents confirmed experience dates and the ongoing Master II", () => {
+    render(<Home />);
+    expect(screen.getByRole("heading", { name: /Quelques.*jalons/ })).toBeVisible();
+    expect(screen.getByRole("heading", { name: "Développeur frontend" })).toBeVisible();
+    expect(screen.getByText("Depuis juin 2024")).toBeVisible();
+    expect(screen.getByRole("heading", { name: "Stagiaire développeur fullstack" })).toBeVisible();
+    expect(screen.getByText("Février 2023 · 3 mois")).toBeVisible();
+    expect(screen.getByRole("heading", { name: "Master II en intelligence artificielle" })).toBeVisible();
+    expect(screen.getByText(/En cours ; établissement/)).toBeVisible();
+  });
+
+  it("links each public certification and distinguishes platform achievements", () => {
+    render(<Home />);
+    for (const certificate of hackerRankCertifications) {
+      expect(screen.getByRole("link", { name: new RegExp(certificate.name.replace(/[()]/g, "\\$&")) })).toHaveAttribute("href", certificate.href);
+    }
+    expect(screen.getByRole("link", { name: "Voir le profil CodinGame" })).toHaveAttribute("href", codingame.href);
+    expect(screen.getByText(/ne remplacent pas les diplômes/)).toBeVisible();
+  });
+
+  it("keeps primary navigation keyboard accessible", async () => {
+    const user = userEvent.setup();
+    render(<Home />);
+    for (const name of ["Ramasama — accueil", "Projets 01", "Parcours 03", "Contact 05", "Découvrir les projets"]) {
       await user.tab();
       expect(screen.getByRole("link", { name })).toHaveFocus();
     }
-  });
-  it("presents confirmed experience without overstating project ownership", () => {
-    render(<Home />);
-    expect(screen.getByRole("heading", { name: "Frontend chez VA-Mada" })).toBeVisible();
-    expect(screen.getByText(/maintenance de tous les modules frontend existants/)).toBeVisible();
-    expect(screen.getByText("LA CURIOSITÉ COMME GRAVITÉ.").parentElement).toHaveAttribute("aria-hidden", "true");
   });
 });

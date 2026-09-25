@@ -6,11 +6,11 @@ export function CareerSections() {
     <>
       <section id="parcours" className={styles.journey} aria-labelledby="journey-title">
         <div className={styles.sectionHeader}><span>03 / PARCOURS</span><span>REPÈRES CONFIRMÉS</span></div>
-        <div className={styles.intro}>
+        <div className={styles.intro} data-reveal="heading">
           <h2 id="journey-title">Quelques<br /><em>jalons.</em></h2>
           <p>Une trajectoire entre interfaces, développement fullstack et intelligence artificielle. Les détails encore inconnus sont indiqués sans approximation.</p>
         </div>
-        <div className={styles.columns}>
+        <div className={styles.columns} data-reveal="feature">
           <div>
             <h3>Expérience <span>01</span></h3>
             <ol className={styles.timeline}>{experiences.map((item) => <li key={item.organization}><span className={styles.period}>{item.period}</span><div><h4>{item.role}</h4><p className={styles.organization}>{item.organization}</p><p className={styles.note}>{item.description}</p></div></li>)}</ol>
@@ -24,8 +24,8 @@ export function CareerSections() {
 
       <section id="certifications" className={styles.credentials} aria-labelledby="credentials-title">
         <div className={styles.sectionHeader}><span>04 / CERTIFICATIONS</span><span>JUSTIFICATIFS PUBLICS</span></div>
-        <div className={styles.credentialsIntro}><h2 id="credentials-title">Preuves de<br /><em>pratique.</em></h2><p>Certifications de plateformes obtenues par des évaluations et exercices. Elles ne remplacent pas les diplômes ni une mesure de maîtrise professionnelle.</p></div>
-        <div className={styles.credentialsGrid}>
+        <div className={styles.credentialsIntro} data-reveal="heading"><h2 id="credentials-title">Preuves de<br /><em>pratique.</em></h2><p>Certifications de plateformes obtenues par des évaluations et exercices. Elles ne remplacent pas les diplômes ni une mesure de maîtrise professionnelle.</p></div>
+        <div className={styles.credentialsGrid} data-reveal="feature">
           <div>
             <h3>HackerRank <span>07 CERTIFICATS</span></h3>
             <ol className={styles.certificateList}>{hackerRankCertifications.map((item, index) => <li key={item.href}><a href={item.href} target="_blank" rel="noreferrer"><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.name}</strong><span aria-hidden="true">↗</span></a></li>)}</ol>

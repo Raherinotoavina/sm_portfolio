@@ -1,8 +1,9 @@
 # Portfolio — RAHERINOTOAVINA Safidy Mariël
 
-Socle Next.js App Router, React, TypeScript, Tailwind CSS 4 et shadcn/ui (Radix).
-La page actuelle est une introduction minimale ; la direction immersive vient
-en phase 02. Suivi : [avancement/README.md](avancement/README.md).
+Portfolio immersif développé avec Next.js App Router, React, TypeScript,
+Tailwind CSS 4 et shadcn/ui (Radix). La direction « intelligence sereine » mêle
+composition éditoriale, organisme cognitif abstrait et animations progressives
+au défilement. Suivi : [avancement/README.md](avancement/README.md).
 
 ## Installation et commandes
 
@@ -32,8 +33,7 @@ Webpack est le moteur de build par défaut ici : Turbopack a rencontré une
 restriction d'ouverture de port lors de la transformation PostCSS dans
 l'environnement local, y compris après relance autorisée. Le build Webpack
 fonctionne ; le script alternatif permet de réévaluer Turbopack ultérieurement.
-Les polices système évitent tout téléchargement de police pendant le build ;
-le choix typographique définitif appartient à la phase artistique.
+Les polices système évitent tout téléchargement de police pendant le build.
 
 ## Architecture
 
@@ -53,7 +53,8 @@ le bouton installé et seront étendus avec les prochains composants.
 ## Tests et couverture
 
 Vitest 5, React Testing Library, user-event et jsdom vérifient les comportements
-visibles : liens, contenu, clavier, état désactivé, composition et document HTML.
+visibles : liens, contenu, clavier, état désactivé, composition, document HTML et
+révélations au défilement avec ou sans `IntersectionObserver`.
 Le layout est rendu en HTML statique pour éviter d'imbriquer un document HTML
 complet dans celui de jsdom. Les composants synchrones actuels sont testables
 directement ; tout futur Server Component asynchrone nécessitera aussi une
@@ -77,8 +78,11 @@ Rapports : `coverage/index.html`, `coverage/lcov.info` et
 ## Intégration continue
 
 `.github/workflows/ci.yml` exécute installation verrouillée, lint, types,
-tests/couverture et build à chaque push et pull request. Les rapports sont
-conservés 14 jours. Le workflow est créé mais n'a pas encore été exécuté sur GitHub.
+tests/couverture et build à chaque push et pull request. Il écoute aussi
+`vercel.deployment.ready`, contrôle le SHA réellement déployé et transmet le
+statut `Vercel - sm-portfolio: lint` aux Deployment Checks. Les rapports sont
+conservés 14 jours. Le workflow doit être présent sur `main` pour recevoir les
+événements `repository_dispatch` ; son état distant doit être vérifié après fusion.
 
 Le job `Lint, types, coverage and build` doit devenir un contrôle requis dans
 la protection de la branche principale pour bloquer les fusions en échec.

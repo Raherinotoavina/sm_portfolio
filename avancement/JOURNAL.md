@@ -173,6 +173,48 @@
 - Suite : recueillir le retour visuel, itérer si nécessaire, puis reprendre la
   validation de livraison.
 
+## 2026-09-24 — Phase 04, animations et première validation
+
+- Créé `codex/phase-04-ai-serenity-validation` depuis la refonte validée.
+- Ajouté un contrôleur client ciblé fondé sur `IntersectionObserver` : révélations
+  progressives des titres et scènes, observation unique, nettoyage au démontage
+  et affichage immédiat lorsque l'API n'est pas disponible.
+- Ajouté les styles de révélation avec flou et déplacement mesurés. Ils ne
+  s'appliquent qu'après hydratation et uniquement avec `prefers-reduced-motion:
+  no-preference` ; le contenu reste visible sans JavaScript.
+- Ajouté deux tests unitaires couvrant le repli sans API, l'intersection,
+  l'arrêt d'observation et le nettoyage.
+- `pnpm check` réussi : lint, types, 16 tests, couverture JS/TS à 100 % et build
+  Webpack statique. Chunk applicatif de la page observé à environ 4 Ko, hors
+  dépendances partagées ; aucun audit Lighthouse complet n'a encore été réalisé.
+- Navigateur de production contrôlé sur ordinateur et à 390 × 844 : animation
+  observée pendant le défilement, étude de cas ouverte, aucun débordement mobile,
+  aucun lien interne ou vide, aucune erreur ou alerte console.
+- `AGENTS.md`, le README projet, le tableau de bord et la phase 04 décrivent
+  maintenant la direction validée « intelligence sereine » et son mouvement.
+- CI distante non vérifiable : dépôt non accessible via l'API GitHub publique et
+  authentification locale `gh` invalide. Aucun réglage distant n'a été modifié.
+- Restent l'audit outillé complet d'accessibilité et de performances, la
+  vérification CI authentifiée et le choix de la cible de déploiement.
+
+## 2026-09-24 — Connexion des contrôles GitHub à Vercel
+
+- Diagnostic : le workflow qualité ne répondait qu'aux événements `push` et
+  `pull_request`; un redéploiement déclenché dans Vercel ne pouvait donc pas le lancer.
+- Ajouté `repository_dispatch` avec le type `vercel.deployment.ready`, recommandé
+  par la documentation Vercel actuelle.
+- Pour ce déclencheur, le workflow utilise
+  `vercel/repository-dispatch/actions/checkout@v1` afin de contrôler le SHA du
+  déploiement plutôt que le dernier SHA de `main` exposé par défaut par GitHub.
+- Ajouté `vercel/repository-dispatch/actions/status@v1` avec le nom exact demandé
+  `Vercel - sm-portfolio: lint`, le token GitHub automatique et la permission
+  minimale `statuses: write`.
+- Les déclencheurs push et pull request conservent `actions/checkout@v4` et le même
+  pipeline lint, types, couverture et build.
+- Vérification distante à faire après fusion sur `main` et création d'un nouveau
+  déploiement : GitHub n'exécute un workflow `repository_dispatch` que s'il est
+  déjà présent sur la branche par défaut.
+
 ## Format pour les prochaines entrées
 
 Date — étape ; travail réalisé ; décisions ; fichiers concernés ; vérifications

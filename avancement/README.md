@@ -5,21 +5,19 @@ Dernière mise à jour : 24 septembre 2026, 19 h 26.
 ## Reprise rapide
 
 Le projet est le portfolio de **RAHERINOTOAVINA Safidy Mariël**.
-Le socle technique et la direction visuelle « carnet de terrain numérique » sont
-implémentés et validés par le propriétaire.
-À la demande du propriétaire, l'observatoire numérique a été remplacé par un
-« carnet de terrain numérique » : fond papier froid, bleu électrique, jaune acide,
-typographie massive et schéma technique. L'étude de cas SIRH & Plus, le profil,
+Le socle technique et la direction visuelle « intelligence sereine » sont
+implémentés et validés par le propriétaire. Cette direction associe ivoire,
+indigo et sauge, halos opalins, typographie éditoriale, organisme cognitif abstrait
+et révélations progressives au défilement. L'étude de cas SIRH & Plus, le profil,
 le parcours, la formation, les certifications et le contact sont intégrés.
 La migration et les modules SIRH & Plus, le Master II en cours et la période du
 stage MTEFoP sont maintenant confirmés. Les résultats et détails de missions
 encore inconnus restent à compléter.
 
-**Phase active : refonte « intelligence sereine » à valider, puis phase 04.**
+**Phase active : 04 — Validation et livraison (en cours).**
 
-Prochaine action : recueillir le retour du propriétaire sur la refonte « intelligence
-sereine », puis vérifier le parcours complet (clavier, réduction des animations,
-accessibilité, mobile, liens et performances) et préparer la livraison. Les
+Prochaine action : réaliser l'audit complet d'accessibilité et de performances,
+vérifier la CI distante, puis choisir la cible de déploiement avec le propriétaire. Les
 problèmes précis, résultats et période SIRH & Plus, ainsi que le projet et la
 stack du stage MTEFoP, pourront enrichir le contenu lorsqu'ils seront fournis.
 Aperçu local :
@@ -33,7 +31,7 @@ http://127.0.0.1:3000 (nécessite le serveur `pnpm start` après build).
 | [01 — Socle technique](phases/01-socle-technique.md) | Terminée localement | Architecture, tests, CI |
 | [02 — Direction artistique](phases/02-direction-artistique.md) | Validée par le propriétaire | Identité visuelle et première section |
 | [03 — Portfolio](phases/03-portfolio.md) | Terminée localement ; compléments éditoriaux ouverts | Sections, interactions et tests associés |
-| [04 — Validation et livraison](phases/04-validation-livraison.md) | À démarrer | Vérifications et préparation de la livraison |
+| [04 — Validation et livraison](phases/04-validation-livraison.md) | En cours | Vérifications et préparation de la livraison |
 
 Statuts utilisables : à faire, en cours, bloquée, terminée. Une phase est terminée
 lorsque ses critères de sortie sont vérifiés ; les tests accompagnent chaque
@@ -49,7 +47,7 @@ fonctionnalité, pas seulement la phase finale.
 - Gestionnaire déclaré : pnpm 10.30.1.
 - Accueil, étude de cas, parcours et certifications composés depuis `components/`, données dans `content/`,
   utilitaires dans `lib/`, bouton shadcn/ui Radix adapté et configuration installés.
-- Vitest 5, React Testing Library et jsdom : 14 tests, 4 fichiers de test.
+- Vitest 5, React Testing Library et jsdom : 16 tests, 5 fichiers de test.
 - `pnpm check` réussi : lint, types, couverture et build Webpack.
 - Couverture locale : 100 % des lignes, instructions, branches et fonctions
   du code JS/TS applicatif mesuré. Seuil de 80 % global et par fichier vérifié par un
@@ -67,6 +65,10 @@ fonctionnalité, pas seulement la phase finale.
   CSS, palette ivoire/indigo/sauge et animations lentes avec repli reduced-motion.
   `pnpm check` réussi (14 tests, couverture 100 %, lint, types et build). Aperçu
   contrôlé sur ordinateur et à 390 × 844, sans débordement ni erreur console.
+- Phase 04 sur `codex/phase-04-ai-serenity-validation` : révélations progressives
+  pilotées par `IntersectionObserver`, contenu visible sans API compatible et
+  effets supprimés en réduction de mouvement. Liens internes, structure, console,
+  disclosure et responsive vérifiés ; `pnpm check` réussi avec 16 tests.
 
 ## Décisions et contexte à préserver
 
@@ -83,7 +85,8 @@ fonctionnalité, pas seulement la phase finale.
   fonctionnalités et couverture minimale de 80 % sont demandés par le propriétaire.
 - Le design doit surprendre et donner la sensation d'entrer dans un autre univers.
 - L'observatoire numérique a été rejeté pour sa proximité perçue avec Claude.
-  « Carnet de terrain numérique » a été validé par le propriétaire le 24 septembre 2026.
+  La piste « carnet de terrain numérique » a précédé la direction désormais
+  validée « intelligence sereine ».
 - Les informations personnelles encore
   manquantes sont listées dans la phase 00 et ne doivent pas être inventées.
 

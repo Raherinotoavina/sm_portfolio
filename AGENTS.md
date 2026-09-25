@@ -71,8 +71,13 @@ Les exigences techniques et graphiques ci-dessous ont été demandées par le pr
 
 - Demande du propriétaire : un design unique, surprenant et immersif, qui donne
   au visiteur la sensation d'entrer dans un autre univers.
+- Direction validée : « intelligence sereine », une présence de l'ère IA calme,
+  apaisante et élégante. Palette ivoire, indigo et sauge, halos opalins,
+  typographie éditoriale et organisme cognitif abstrait ; éviter les clichés
+  cyberpunk, les dashboards futuristes et les effets visuels agressifs.
+- Le mouvement fait partie de l'identité : révélations progressives au défilement,
+  animations lentes et organiques, effets marqués réservés aux moments clés.
 - Concevoir une identité cohérente : typographie, composition, couleurs, profondeur
   et interactions doivent contribuer à cette sensation.
 - Préserver la lisibilité du parcours, l'accès aux projets et au contact, le
   responsive, la navigation clavier et le respect de prefers-reduced-motion.
-- Le thème visuel précis reste une proposition créative, pas un choix déjà validé.
